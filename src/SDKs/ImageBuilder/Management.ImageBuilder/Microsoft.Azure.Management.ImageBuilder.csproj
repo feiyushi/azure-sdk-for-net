@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <!-- Please do not move/edit code below this line -->
+  <Import Project="$([MSBuild]::GetPathOfFileAbove('AzSdk.reference.props'))" />
+  <!-- Please do not move/edit code below this line -->
+
+  <PropertyGroup>
+    <PackageId>Microsoft.Azure.Management.ImageBuilder</PackageId>
+    <Description>Provides developers with libraries for the updated ImageBuilder service under Azure Resource manager to create an image template and start building and customizing virtual machine images. The output format of images are Managed Images, Shared Image Gallery Image Versions and VHDs.</Description>
+    <Version>1.0.0</Version>
+    <AssemblyName>Microsoft.Azure.Management.ImageBuilder</AssemblyName>
+    <PackageTags>management;image template;ImageBuilder;</PackageTags>
+    <PackageReleaseNotes>
+      <![CDATA[
+        This is a public release of the Azure ImageBuilder SDK. Included with this release is API version 2019-05-01-preview.
+      ]]>
+    </PackageReleaseNotes>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetFrameworks>$(SdkTargetFx)</TargetFrameworks>
+  </PropertyGroup>
+
+  <!-- Please do not move/edit code below this line -->
+  <Import Condition=" Exists('$([MSBuild]::GetPathOfFileAbove(AzSdk.RP.props))') " Project="$([MSBuild]::GetPathOfFileAbove('AzSdk.RP.props'))" />
+  <!-- Please do not move/edit code above this line -->
+</Project>
