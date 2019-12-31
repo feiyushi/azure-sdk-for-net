@@ -35,6 +35,8 @@ namespace Microsoft.Azure.Management.ImageBuilder.Models
         /// RunOutput.</param>
         /// <param name="galleryImageId">Resource Id of the Shared Image
         /// Gallery image</param>
+        /// <param name="replicationRegions">A list of regions that the image
+        /// will be replicated to</param>
         /// <param name="artifactTags">Tags that will be applied to the
         /// artifact once it has been created/updated by the
         /// distributor.</param>
@@ -58,6 +60,7 @@ namespace Microsoft.Azure.Management.ImageBuilder.Models
         public string GalleryImageId { get; set; }
 
         /// <summary>
+        /// Gets or sets a list of regions that the image will be replicated to
         /// </summary>
         [JsonProperty(PropertyName = "replicationRegions")]
         public IList<string> ReplicationRegions { get; set; }

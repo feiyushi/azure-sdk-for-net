@@ -37,15 +37,21 @@ namespace Microsoft.Azure.Management.ImageBuilder.Models
         /// <param name="scriptUri">URI of the PowerShell script to be run for
         /// customizing. It can be a github link, SAS URI for Azure Storage,
         /// etc</param>
+        /// <param name="sha256Checksum">SHA256 checksum of the power shell
+        /// script provided in the scriptUri field above</param>
         /// <param name="inline">Array of PowerShell commands to
         /// execute</param>
+        /// <param name="runElevated">If specified, the PowerShell script will
+        /// be run with elevated privileges</param>
         /// <param name="validExitCodes">Valid exit codes for the PowerShell
         /// script. [Default: 0]</param>
-        public ImageTemplatePowerShellCustomizer(string name = default(string), string scriptUri = default(string), IList<string> inline = default(IList<string>), IList<int?> validExitCodes = default(IList<int?>))
+        public ImageTemplatePowerShellCustomizer(string name = default(string), string scriptUri = default(string), string sha256Checksum = default(string), IList<string> inline = default(IList<string>), bool? runElevated = default(bool?), IList<int?> validExitCodes = default(IList<int?>))
             : base(name)
         {
             ScriptUri = scriptUri;
+            Sha256Checksum = sha256Checksum;
             Inline = inline;
+            RunElevated = runElevated;
             ValidExitCodes = validExitCodes;
             CustomInit();
         }
@@ -64,10 +70,24 @@ namespace Microsoft.Azure.Management.ImageBuilder.Models
         public string ScriptUri { get; set; }
 
         /// <summary>
+        /// Gets or sets SHA256 checksum of the power shell script provided in
+        /// the scriptUri field above
+        /// </summary>
+        [JsonProperty(PropertyName = "sha256Checksum")]
+        public string Sha256Checksum { get; set; }
+
+        /// <summary>
         /// Gets or sets array of PowerShell commands to execute
         /// </summary>
         [JsonProperty(PropertyName = "inline")]
         public IList<string> Inline { get; set; }
+
+        /// <summary>
+        /// Gets or sets if specified, the PowerShell script will be run with
+        /// elevated privileges
+        /// </summary>
+        [JsonProperty(PropertyName = "runElevated")]
+        public bool? RunElevated { get; set; }
 
         /// <summary>
         /// Gets or sets valid exit codes for the PowerShell script. [Default:

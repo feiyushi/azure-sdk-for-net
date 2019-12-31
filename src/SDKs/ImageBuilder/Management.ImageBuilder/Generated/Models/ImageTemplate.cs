@@ -13,6 +13,10 @@ namespace Microsoft.Azure.Management.ImageBuilder.Models
     using System.Collections.Generic;
     using System.Linq;
 
+    /// <summary>
+    /// Image template is an ARM resource managed by
+    /// Microsoft.VirtualMachineImages provider
+    /// </summary>
     [Rest.Serialization.JsonTransformation]
     public partial class ImageTemplate : Resource
     {
@@ -45,10 +49,13 @@ namespace Microsoft.Azure.Management.ImageBuilder.Models
         /// <param name="lastRunStatus">State of 'run' that is currently
         /// executing or was last executed.</param>
         /// <param name="buildTimeoutInMinutes">Maximum duration to wait while
-        /// building the image template. Default is 60 minutes.</param>
+        /// building the image template. Omit or specify 0 to use the default
+        /// (4 hours).</param>
+        /// <param name="vmProfile">Describes how virtual machine is set up to
+        /// build images</param>
         /// <param name="identity">The identity of the image template, if
         /// configured.</param>
-        public ImageTemplate(string location, ImageTemplateSource source, IList<ImageTemplateDistributor> distribute, string id = default(string), string name = default(string), string type = default(string), IDictionary<string, string> tags = default(IDictionary<string, string>), IList<ImageTemplateCustomizer> customize = default(IList<ImageTemplateCustomizer>), string provisioningState = default(string), ProvisioningError provisioningError = default(ProvisioningError), ImageTemplateLastRunStatus lastRunStatus = default(ImageTemplateLastRunStatus), int? buildTimeoutInMinutes = default(int?), ImageTemplateIdentity identity = default(ImageTemplateIdentity))
+        public ImageTemplate(string location, ImageTemplateSource source, IList<ImageTemplateDistributor> distribute, string id = default(string), string name = default(string), string type = default(string), IDictionary<string, string> tags = default(IDictionary<string, string>), IList<ImageTemplateCustomizer> customize = default(IList<ImageTemplateCustomizer>), ProvisioningState? provisioningState = default(ProvisioningState?), ProvisioningError provisioningError = default(ProvisioningError), ImageTemplateLastRunStatus lastRunStatus = default(ImageTemplateLastRunStatus), int? buildTimeoutInMinutes = default(int?), ImageTemplateVmProfile vmProfile = default(ImageTemplateVmProfile), ImageTemplateIdentity identity = default(ImageTemplateIdentity))
             : base(location, id, name, type, tags)
         {
             Source = source;
@@ -58,6 +65,7 @@ namespace Microsoft.Azure.Management.ImageBuilder.Models
             ProvisioningError = provisioningError;
             LastRunStatus = lastRunStatus;
             BuildTimeoutInMinutes = buildTimeoutInMinutes;
+            VmProfile = vmProfile;
             Identity = identity;
             CustomInit();
         }
@@ -93,7 +101,7 @@ namespace Microsoft.Azure.Management.ImageBuilder.Models
         /// 'Creating', 'Updating', 'Succeeded', 'Failed', 'Deleting'
         /// </summary>
         [JsonProperty(PropertyName = "properties.provisioningState")]
-        public string ProvisioningState { get; private set; }
+        public ProvisioningState? ProvisioningState { get; private set; }
 
         /// <summary>
         /// Gets provisioning error, if any
@@ -110,10 +118,17 @@ namespace Microsoft.Azure.Management.ImageBuilder.Models
 
         /// <summary>
         /// Gets or sets maximum duration to wait while building the image
-        /// template. Default is 60 minutes.
+        /// template. Omit or specify 0 to use the default (4 hours).
         /// </summary>
         [JsonProperty(PropertyName = "properties.buildTimeoutInMinutes")]
         public int? BuildTimeoutInMinutes { get; set; }
+
+        /// <summary>
+        /// Gets or sets describes how virtual machine is set up to build
+        /// images
+        /// </summary>
+        [JsonProperty(PropertyName = "properties.vmProfile")]
+        public ImageTemplateVmProfile VmProfile { get; set; }
 
         /// <summary>
         /// Gets or sets the identity of the image template, if configured.
@@ -147,6 +162,14 @@ namespace Microsoft.Azure.Management.ImageBuilder.Models
                         element.Validate();
                     }
                 }
+            }
+            if (BuildTimeoutInMinutes > 960)
+            {
+                throw new ValidationException(ValidationRules.InclusiveMaximum, "BuildTimeoutInMinutes", 960);
+            }
+            if (BuildTimeoutInMinutes < 0)
+            {
+                throw new ValidationException(ValidationRules.InclusiveMinimum, "BuildTimeoutInMinutes", 0);
             }
         }
     }

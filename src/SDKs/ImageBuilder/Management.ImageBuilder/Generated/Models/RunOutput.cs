@@ -36,7 +36,7 @@ namespace Microsoft.Azure.Management.ImageBuilder.Models
         /// <param name="provisioningState">Provisioning state of the resource.
         /// Possible values include: 'Creating', 'Updating', 'Succeeded',
         /// 'Failed', 'Deleting'</param>
-        public RunOutput(string name, string id = default(string), string type = default(string), string artifactId = default(string), string artifactUri = default(string), string provisioningState = default(string))
+        public RunOutput(string name, string id = default(string), string type = default(string), string artifactId = default(string), string artifactUri = default(string), ProvisioningState? provisioningState = default(ProvisioningState?))
             : base(name, id, type)
         {
             ArtifactId = artifactId;
@@ -67,7 +67,7 @@ namespace Microsoft.Azure.Management.ImageBuilder.Models
         /// 'Creating', 'Updating', 'Succeeded', 'Failed', 'Deleting'
         /// </summary>
         [JsonProperty(PropertyName = "properties.provisioningState")]
-        public string ProvisioningState { get; private set; }
+        public ProvisioningState? ProvisioningState { get; private set; }
 
         /// <summary>
         /// Validate the object.

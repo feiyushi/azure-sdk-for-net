@@ -37,11 +37,14 @@ namespace Microsoft.Azure.Management.ImageBuilder.Models
         /// <param name="scriptUri">URI of the shell script to be run for
         /// customizing. It can be a github link, SAS URI for Azure Storage,
         /// etc</param>
+        /// <param name="sha256Checksum">SHA256 checksum of the shell script
+        /// provided in the scriptUri field</param>
         /// <param name="inline">Array of shell commands to execute</param>
-        public ImageTemplateShellCustomizer(string name = default(string), string scriptUri = default(string), IList<string> inline = default(IList<string>))
+        public ImageTemplateShellCustomizer(string name = default(string), string scriptUri = default(string), string sha256Checksum = default(string), IList<string> inline = default(IList<string>))
             : base(name)
         {
             ScriptUri = scriptUri;
+            Sha256Checksum = sha256Checksum;
             Inline = inline;
             CustomInit();
         }
@@ -57,6 +60,13 @@ namespace Microsoft.Azure.Management.ImageBuilder.Models
         /// </summary>
         [JsonProperty(PropertyName = "scriptUri")]
         public string ScriptUri { get; set; }
+
+        /// <summary>
+        /// Gets or sets SHA256 checksum of the shell script provided in the
+        /// scriptUri field
+        /// </summary>
+        [JsonProperty(PropertyName = "sha256Checksum")]
+        public string Sha256Checksum { get; set; }
 
         /// <summary>
         /// Gets or sets array of shell commands to execute

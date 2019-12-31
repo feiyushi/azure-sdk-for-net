@@ -9,6 +9,9 @@ namespace Microsoft.Azure.Management.ImageBuilder.Models
     using Newtonsoft.Json;
     using System.Linq;
 
+    /// <summary>
+    /// Describes the error happened when create or update an image template
+    /// </summary>
     public partial class ProvisioningError
     {
         /// <summary>

@@ -8,6 +8,10 @@ namespace Microsoft.Azure.Management.ImageBuilder.Models
 {
     using System.Linq;
 
+    /// <summary>
+    /// Describes a virtual machine image source for building, customizing and
+    /// distributing
+    /// </summary>
     public partial class ImageTemplateSource
     {
         /// <summary>

@@ -9,6 +9,9 @@ namespace Microsoft.Azure.Management.ImageBuilder.Models
     using Newtonsoft.Json;
     using System.Linq;
 
+    /// <summary>
+    /// Describes the latest status of running an image template
+    /// </summary>
     public partial class ImageTemplateLastRunStatus
     {
         /// <summary>
@@ -32,7 +35,7 @@ namespace Microsoft.Azure.Management.ImageBuilder.Models
         /// 'Distributing'</param>
         /// <param name="message">Verbose information about the last run
         /// state</param>
-        public ImageTemplateLastRunStatus(System.DateTime? startTime = default(System.DateTime?), System.DateTime? endTime = default(System.DateTime?), string runState = default(string), string runSubState = default(string), string message = default(string))
+        public ImageTemplateLastRunStatus(System.DateTime? startTime = default(System.DateTime?), System.DateTime? endTime = default(System.DateTime?), RunState? runState = default(RunState?), RunSubState? runSubState = default(RunSubState?), string message = default(string))
         {
             StartTime = startTime;
             EndTime = endTime;
@@ -64,14 +67,14 @@ namespace Microsoft.Azure.Management.ImageBuilder.Models
         /// 'Running', 'Succeeded', 'PartiallySucceeded', 'Failed'
         /// </summary>
         [JsonProperty(PropertyName = "runState")]
-        public string RunState { get; set; }
+        public RunState? RunState { get; set; }
 
         /// <summary>
         /// Gets or sets sub-state of the last run. Possible values include:
         /// 'Queued', 'Building', 'Customizing', 'Distributing'
         /// </summary>
         [JsonProperty(PropertyName = "runSubState")]
-        public string RunSubState { get; set; }
+        public RunSubState? RunSubState { get; set; }
 
         /// <summary>
         /// Gets or sets verbose information about the last run state

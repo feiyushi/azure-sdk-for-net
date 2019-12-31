@@ -72,9 +72,9 @@ namespace Microsoft.Azure.Management.ImageBuilder.Models
             }
             if (RunOutputName != null)
             {
-                if (!System.Text.RegularExpressions.Regex.IsMatch(RunOutputName, "^[A-Za-z0-9-_]{1,64}$"))
+                if (!System.Text.RegularExpressions.Regex.IsMatch(RunOutputName, "^[A-Za-z0-9-_.]{1,64}$"))
                 {
-                    throw new ValidationException(ValidationRules.Pattern, "RunOutputName", "^[A-Za-z0-9-_]{1,64}$");
+                    throw new ValidationException(ValidationRules.Pattern, "RunOutputName", "^[A-Za-z0-9-_.]{1,64}$");
                 }
             }
         }

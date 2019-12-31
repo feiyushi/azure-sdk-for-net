@@ -34,13 +34,16 @@ namespace Microsoft.Azure.Management.ImageBuilder.Models
         /// <param name="sourceUri">The URI of the file to be uploaded for
         /// customizing the VM. It can be a github link, SAS URI for Azure
         /// Storage, etc</param>
-        /// <param name="destination">The absolute path (with existing
-        /// directory structure) where the file will be uploaded to in the
-        /// VM</param>
-        public ImageTemplateFileCustomizer(string name = default(string), string sourceUri = default(string), string destination = default(string))
+        /// <param name="sha256Checksum">SHA256 checksum of the file provided
+        /// in the sourceUri field above</param>
+        /// <param name="destination">The absolute path to a file (with nested
+        /// directory structures already created) where the file (from
+        /// sourceUri) will be uploaded to in the VM</param>
+        public ImageTemplateFileCustomizer(string name = default(string), string sourceUri = default(string), string sha256Checksum = default(string), string destination = default(string))
             : base(name)
         {
             SourceUri = sourceUri;
+            Sha256Checksum = sha256Checksum;
             Destination = destination;
             CustomInit();
         }
@@ -58,8 +61,16 @@ namespace Microsoft.Azure.Management.ImageBuilder.Models
         public string SourceUri { get; set; }
 
         /// <summary>
-        /// Gets or sets the absolute path (with existing directory structure)
-        /// where the file will be uploaded to in the VM
+        /// Gets or sets SHA256 checksum of the file provided in the sourceUri
+        /// field above
+        /// </summary>
+        [JsonProperty(PropertyName = "sha256Checksum")]
+        public string Sha256Checksum { get; set; }
+
+        /// <summary>
+        /// Gets or sets the absolute path to a file (with nested directory
+        /// structures already created) where the file (from sourceUri) will be
+        /// uploaded to in the VM
         /// </summary>
         [JsonProperty(PropertyName = "destination")]
         public string Destination { get; set; }

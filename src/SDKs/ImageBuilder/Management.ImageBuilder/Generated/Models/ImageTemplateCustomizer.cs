@@ -9,6 +9,9 @@ namespace Microsoft.Azure.Management.ImageBuilder.Models
     using Newtonsoft.Json;
     using System.Linq;
 
+    /// <summary>
+    /// Describes a unit of image customization
+    /// </summary>
     public partial class ImageTemplateCustomizer
     {
         /// <summary>

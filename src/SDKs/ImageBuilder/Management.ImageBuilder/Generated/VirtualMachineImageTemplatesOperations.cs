@@ -503,9 +503,9 @@ namespace Microsoft.Azure.Management.ImageBuilder
             }
             if (imageTemplateName != null)
             {
-                if (!System.Text.RegularExpressions.Regex.IsMatch(imageTemplateName, "^[A-Za-z0-9-_]{1,64}$"))
+                if (!System.Text.RegularExpressions.Regex.IsMatch(imageTemplateName, "^[A-Za-z0-9-_.]{1,64}$"))
                 {
-                    throw new ValidationException(ValidationRules.Pattern, "imageTemplateName", "^[A-Za-z0-9-_]{1,64}$");
+                    throw new ValidationException(ValidationRules.Pattern, "imageTemplateName", "^[A-Za-z0-9-_.]{1,64}$");
                 }
             }
             // Tracing
@@ -745,9 +745,9 @@ namespace Microsoft.Azure.Management.ImageBuilder
             }
             if (imageTemplateName != null)
             {
-                if (!System.Text.RegularExpressions.Regex.IsMatch(imageTemplateName, "^[A-Za-z0-9-_]{1,64}$"))
+                if (!System.Text.RegularExpressions.Regex.IsMatch(imageTemplateName, "^[A-Za-z0-9-_.]{1,64}$"))
                 {
-                    throw new ValidationException(ValidationRules.Pattern, "imageTemplateName", "^[A-Za-z0-9-_]{1,64}$");
+                    throw new ValidationException(ValidationRules.Pattern, "imageTemplateName", "^[A-Za-z0-9-_.]{1,64}$");
                 }
             }
             // Tracing
@@ -946,9 +946,9 @@ namespace Microsoft.Azure.Management.ImageBuilder
             }
             if (imageTemplateName != null)
             {
-                if (!System.Text.RegularExpressions.Regex.IsMatch(imageTemplateName, "^[A-Za-z0-9-_]{1,64}$"))
+                if (!System.Text.RegularExpressions.Regex.IsMatch(imageTemplateName, "^[A-Za-z0-9-_.]{1,64}$"))
                 {
-                    throw new ValidationException(ValidationRules.Pattern, "imageTemplateName", "^[A-Za-z0-9-_]{1,64}$");
+                    throw new ValidationException(ValidationRules.Pattern, "imageTemplateName", "^[A-Za-z0-9-_.]{1,64}$");
                 }
             }
             if (runOutputName == null)
@@ -957,9 +957,9 @@ namespace Microsoft.Azure.Management.ImageBuilder
             }
             if (runOutputName != null)
             {
-                if (!System.Text.RegularExpressions.Regex.IsMatch(runOutputName, "^[A-Za-z0-9-_]{1,64}$"))
+                if (!System.Text.RegularExpressions.Regex.IsMatch(runOutputName, "^[A-Za-z0-9-_.]{1,64}$"))
                 {
-                    throw new ValidationException(ValidationRules.Pattern, "runOutputName", "^[A-Za-z0-9-_]{1,64}$");
+                    throw new ValidationException(ValidationRules.Pattern, "runOutputName", "^[A-Za-z0-9-_.]{1,64}$");
                 }
             }
             // Tracing
@@ -1168,9 +1168,9 @@ namespace Microsoft.Azure.Management.ImageBuilder
             }
             if (imageTemplateName != null)
             {
-                if (!System.Text.RegularExpressions.Regex.IsMatch(imageTemplateName, "^[A-Za-z0-9-_]{1,64}$"))
+                if (!System.Text.RegularExpressions.Regex.IsMatch(imageTemplateName, "^[A-Za-z0-9-_.]{1,64}$"))
                 {
-                    throw new ValidationException(ValidationRules.Pattern, "imageTemplateName", "^[A-Za-z0-9-_]{1,64}$");
+                    throw new ValidationException(ValidationRules.Pattern, "imageTemplateName", "^[A-Za-z0-9-_.]{1,64}$");
                 }
             }
             // Tracing
@@ -1394,9 +1394,9 @@ namespace Microsoft.Azure.Management.ImageBuilder
             }
             if (imageTemplateName != null)
             {
-                if (!System.Text.RegularExpressions.Regex.IsMatch(imageTemplateName, "^[A-Za-z0-9-_]{1,64}$"))
+                if (!System.Text.RegularExpressions.Regex.IsMatch(imageTemplateName, "^[A-Za-z0-9-_.]{1,64}$"))
                 {
-                    throw new ValidationException(ValidationRules.Pattern, "imageTemplateName", "^[A-Za-z0-9-_]{1,64}$");
+                    throw new ValidationException(ValidationRules.Pattern, "imageTemplateName", "^[A-Za-z0-9-_.]{1,64}$");
                 }
             }
             if (Client.ApiVersion == null)
@@ -1600,9 +1600,9 @@ namespace Microsoft.Azure.Management.ImageBuilder
             }
             if (imageTemplateName != null)
             {
-                if (!System.Text.RegularExpressions.Regex.IsMatch(imageTemplateName, "^[A-Za-z0-9-_]{1,64}$"))
+                if (!System.Text.RegularExpressions.Regex.IsMatch(imageTemplateName, "^[A-Za-z0-9-_.]{1,64}$"))
                 {
-                    throw new ValidationException(ValidationRules.Pattern, "imageTemplateName", "^[A-Za-z0-9-_]{1,64}$");
+                    throw new ValidationException(ValidationRules.Pattern, "imageTemplateName", "^[A-Za-z0-9-_.]{1,64}$");
                 }
             }
             // Tracing
@@ -1777,9 +1777,9 @@ namespace Microsoft.Azure.Management.ImageBuilder
             }
             if (imageTemplateName != null)
             {
-                if (!System.Text.RegularExpressions.Regex.IsMatch(imageTemplateName, "^[A-Za-z0-9-_]{1,64}$"))
+                if (!System.Text.RegularExpressions.Regex.IsMatch(imageTemplateName, "^[A-Za-z0-9-_.]{1,64}$"))
                 {
-                    throw new ValidationException(ValidationRules.Pattern, "imageTemplateName", "^[A-Za-z0-9-_]{1,64}$");
+                    throw new ValidationException(ValidationRules.Pattern, "imageTemplateName", "^[A-Za-z0-9-_.]{1,64}$");
                 }
             }
             // Tracing
