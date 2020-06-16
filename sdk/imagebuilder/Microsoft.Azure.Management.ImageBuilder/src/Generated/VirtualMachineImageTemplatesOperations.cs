@@ -4,7 +4,7 @@
 // regenerated.
 // </auto-generated>
 
-namespace Imagebuilder
+namespace Microsoft.Azure.Management.ImageBuilder
 {
     using Microsoft.Rest;
     using Microsoft.Rest.Azure;
@@ -164,7 +164,7 @@ namespace Imagebuilder
                 try
                 {
                     _responseContent = await _httpResponse.Content.ReadAsStringAsync().ConfigureAwait(false);
-                    ApiError _errorBody =  Microsoft.Rest.Serialization.SafeJsonConvert.DeserializeObject<ApiError>(_responseContent, Client.DeserializationSettings);
+                    ApiError _errorBody =  Rest.Serialization.SafeJsonConvert.DeserializeObject<ApiError>(_responseContent, Client.DeserializationSettings);
                     if (_errorBody != null)
                     {
                         ex.Body = _errorBody;
@@ -201,7 +201,7 @@ namespace Imagebuilder
                 _responseContent = await _httpResponse.Content.ReadAsStringAsync().ConfigureAwait(false);
                 try
                 {
-                    _result.Body = Microsoft.Rest.Serialization.SafeJsonConvert.DeserializeObject<Page<ImageTemplate>>(_responseContent, Client.DeserializationSettings);
+                    _result.Body = Rest.Serialization.SafeJsonConvert.DeserializeObject<Page<ImageTemplate>>(_responseContent, Client.DeserializationSettings);
                 }
                 catch (JsonException ex)
                 {
@@ -347,7 +347,7 @@ namespace Imagebuilder
                 try
                 {
                     _responseContent = await _httpResponse.Content.ReadAsStringAsync().ConfigureAwait(false);
-                    ApiError _errorBody =  Microsoft.Rest.Serialization.SafeJsonConvert.DeserializeObject<ApiError>(_responseContent, Client.DeserializationSettings);
+                    ApiError _errorBody =  Rest.Serialization.SafeJsonConvert.DeserializeObject<ApiError>(_responseContent, Client.DeserializationSettings);
                     if (_errorBody != null)
                     {
                         ex.Body = _errorBody;
@@ -384,7 +384,7 @@ namespace Imagebuilder
                 _responseContent = await _httpResponse.Content.ReadAsStringAsync().ConfigureAwait(false);
                 try
                 {
-                    _result.Body = Microsoft.Rest.Serialization.SafeJsonConvert.DeserializeObject<Page<ImageTemplate>>(_responseContent, Client.DeserializationSettings);
+                    _result.Body = Rest.Serialization.SafeJsonConvert.DeserializeObject<Page<ImageTemplate>>(_responseContent, Client.DeserializationSettings);
                 }
                 catch (JsonException ex)
                 {
@@ -595,7 +595,7 @@ namespace Imagebuilder
                 try
                 {
                     _responseContent = await _httpResponse.Content.ReadAsStringAsync().ConfigureAwait(false);
-                    ApiError _errorBody =  Microsoft.Rest.Serialization.SafeJsonConvert.DeserializeObject<ApiError>(_responseContent, Client.DeserializationSettings);
+                    ApiError _errorBody =  Rest.Serialization.SafeJsonConvert.DeserializeObject<ApiError>(_responseContent, Client.DeserializationSettings);
                     if (_errorBody != null)
                     {
                         ex.Body = _errorBody;
@@ -632,7 +632,7 @@ namespace Imagebuilder
                 _responseContent = await _httpResponse.Content.ReadAsStringAsync().ConfigureAwait(false);
                 try
                 {
-                    _result.Body = Microsoft.Rest.Serialization.SafeJsonConvert.DeserializeObject<ImageTemplate>(_responseContent, Client.DeserializationSettings);
+                    _result.Body = Rest.Serialization.SafeJsonConvert.DeserializeObject<ImageTemplate>(_responseContent, Client.DeserializationSettings);
                 }
                 catch (JsonException ex)
                 {
@@ -859,7 +859,7 @@ namespace Imagebuilder
                 try
                 {
                     _responseContent = await _httpResponse.Content.ReadAsStringAsync().ConfigureAwait(false);
-                    ApiError _errorBody =  Microsoft.Rest.Serialization.SafeJsonConvert.DeserializeObject<ApiError>(_responseContent, Client.DeserializationSettings);
+                    ApiError _errorBody =  Rest.Serialization.SafeJsonConvert.DeserializeObject<ApiError>(_responseContent, Client.DeserializationSettings);
                     if (_errorBody != null)
                     {
                         ex.Body = _errorBody;
@@ -896,7 +896,7 @@ namespace Imagebuilder
                 _responseContent = await _httpResponse.Content.ReadAsStringAsync().ConfigureAwait(false);
                 try
                 {
-                    _result.Body = Microsoft.Rest.Serialization.SafeJsonConvert.DeserializeObject<Page<RunOutput>>(_responseContent, Client.DeserializationSettings);
+                    _result.Body = Rest.Serialization.SafeJsonConvert.DeserializeObject<Page<RunOutput>>(_responseContent, Client.DeserializationSettings);
                 }
                 catch (JsonException ex)
                 {
@@ -1073,7 +1073,7 @@ namespace Imagebuilder
                 try
                 {
                     _responseContent = await _httpResponse.Content.ReadAsStringAsync().ConfigureAwait(false);
-                    ApiError _errorBody =  Microsoft.Rest.Serialization.SafeJsonConvert.DeserializeObject<ApiError>(_responseContent, Client.DeserializationSettings);
+                    ApiError _errorBody =  Rest.Serialization.SafeJsonConvert.DeserializeObject<ApiError>(_responseContent, Client.DeserializationSettings);
                     if (_errorBody != null)
                     {
                         ex.Body = _errorBody;
@@ -1110,7 +1110,7 @@ namespace Imagebuilder
                 _responseContent = await _httpResponse.Content.ReadAsStringAsync().ConfigureAwait(false);
                 try
                 {
-                    _result.Body = Microsoft.Rest.Serialization.SafeJsonConvert.DeserializeObject<RunOutput>(_responseContent, Client.DeserializationSettings);
+                    _result.Body = Rest.Serialization.SafeJsonConvert.DeserializeObject<RunOutput>(_responseContent, Client.DeserializationSettings);
                 }
                 catch (JsonException ex)
                 {
@@ -1259,7 +1259,7 @@ namespace Imagebuilder
             string _requestContent = null;
             if(parameters != null)
             {
-                _requestContent = Microsoft.Rest.Serialization.SafeJsonConvert.SerializeObject(parameters, Client.SerializationSettings);
+                _requestContent = Rest.Serialization.SafeJsonConvert.SerializeObject(parameters, Client.SerializationSettings);
                 _httpRequest.Content = new StringContent(_requestContent, System.Text.Encoding.UTF8);
                 _httpRequest.Content.Headers.ContentType =System.Net.Http.Headers.MediaTypeHeaderValue.Parse("application/json; charset=utf-8");
             }
@@ -1289,7 +1289,7 @@ namespace Imagebuilder
                 try
                 {
                     _responseContent = await _httpResponse.Content.ReadAsStringAsync().ConfigureAwait(false);
-                    ApiError _errorBody =  Microsoft.Rest.Serialization.SafeJsonConvert.DeserializeObject<ApiError>(_responseContent, Client.DeserializationSettings);
+                    ApiError _errorBody =  Rest.Serialization.SafeJsonConvert.DeserializeObject<ApiError>(_responseContent, Client.DeserializationSettings);
                     if (_errorBody != null)
                     {
                         ex.Body = _errorBody;
@@ -1326,7 +1326,7 @@ namespace Imagebuilder
                 _responseContent = await _httpResponse.Content.ReadAsStringAsync().ConfigureAwait(false);
                 try
                 {
-                    _result.Body = Microsoft.Rest.Serialization.SafeJsonConvert.DeserializeObject<ImageTemplate>(_responseContent, Client.DeserializationSettings);
+                    _result.Body = Rest.Serialization.SafeJsonConvert.DeserializeObject<ImageTemplate>(_responseContent, Client.DeserializationSettings);
                 }
                 catch (JsonException ex)
                 {
@@ -1344,7 +1344,7 @@ namespace Imagebuilder
                 _responseContent = await _httpResponse.Content.ReadAsStringAsync().ConfigureAwait(false);
                 try
                 {
-                    _result.Body = Microsoft.Rest.Serialization.SafeJsonConvert.DeserializeObject<ImageTemplate>(_responseContent, Client.DeserializationSettings);
+                    _result.Body = Rest.Serialization.SafeJsonConvert.DeserializeObject<ImageTemplate>(_responseContent, Client.DeserializationSettings);
                 }
                 catch (JsonException ex)
                 {
@@ -1489,7 +1489,7 @@ namespace Imagebuilder
             string _requestContent = null;
             if(parameters != null)
             {
-                _requestContent = Microsoft.Rest.Serialization.SafeJsonConvert.SerializeObject(parameters, Client.SerializationSettings);
+                _requestContent = Rest.Serialization.SafeJsonConvert.SerializeObject(parameters, Client.SerializationSettings);
                 _httpRequest.Content = new StringContent(_requestContent, System.Text.Encoding.UTF8);
                 _httpRequest.Content.Headers.ContentType =System.Net.Http.Headers.MediaTypeHeaderValue.Parse("application/json; charset=utf-8");
             }
@@ -1519,7 +1519,7 @@ namespace Imagebuilder
                 try
                 {
                     _responseContent = await _httpResponse.Content.ReadAsStringAsync().ConfigureAwait(false);
-                    ApiError _errorBody =  Microsoft.Rest.Serialization.SafeJsonConvert.DeserializeObject<ApiError>(_responseContent, Client.DeserializationSettings);
+                    ApiError _errorBody =  Rest.Serialization.SafeJsonConvert.DeserializeObject<ApiError>(_responseContent, Client.DeserializationSettings);
                     if (_errorBody != null)
                     {
                         ex.Body = _errorBody;
@@ -1556,7 +1556,7 @@ namespace Imagebuilder
                 _responseContent = await _httpResponse.Content.ReadAsStringAsync().ConfigureAwait(false);
                 try
                 {
-                    _result.Body = Microsoft.Rest.Serialization.SafeJsonConvert.DeserializeObject<ImageTemplate>(_responseContent, Client.DeserializationSettings);
+                    _result.Body = Rest.Serialization.SafeJsonConvert.DeserializeObject<ImageTemplate>(_responseContent, Client.DeserializationSettings);
                 }
                 catch (JsonException ex)
                 {
@@ -1714,7 +1714,7 @@ namespace Imagebuilder
                 try
                 {
                     _responseContent = await _httpResponse.Content.ReadAsStringAsync().ConfigureAwait(false);
-                    ApiError _errorBody =  Microsoft.Rest.Serialization.SafeJsonConvert.DeserializeObject<ApiError>(_responseContent, Client.DeserializationSettings);
+                    ApiError _errorBody =  Rest.Serialization.SafeJsonConvert.DeserializeObject<ApiError>(_responseContent, Client.DeserializationSettings);
                     if (_errorBody != null)
                     {
                         ex.Body = _errorBody;
@@ -1891,7 +1891,7 @@ namespace Imagebuilder
                 try
                 {
                     _responseContent = await _httpResponse.Content.ReadAsStringAsync().ConfigureAwait(false);
-                    ApiError _errorBody =  Microsoft.Rest.Serialization.SafeJsonConvert.DeserializeObject<ApiError>(_responseContent, Client.DeserializationSettings);
+                    ApiError _errorBody =  Rest.Serialization.SafeJsonConvert.DeserializeObject<ApiError>(_responseContent, Client.DeserializationSettings);
                     if (_errorBody != null)
                     {
                         ex.Body = _errorBody;
@@ -2068,7 +2068,7 @@ namespace Imagebuilder
                 try
                 {
                     _responseContent = await _httpResponse.Content.ReadAsStringAsync().ConfigureAwait(false);
-                    ApiError _errorBody =  Microsoft.Rest.Serialization.SafeJsonConvert.DeserializeObject<ApiError>(_responseContent, Client.DeserializationSettings);
+                    ApiError _errorBody =  Rest.Serialization.SafeJsonConvert.DeserializeObject<ApiError>(_responseContent, Client.DeserializationSettings);
                     if (_errorBody != null)
                     {
                         ex.Body = _errorBody;
@@ -2219,7 +2219,7 @@ namespace Imagebuilder
                 try
                 {
                     _responseContent = await _httpResponse.Content.ReadAsStringAsync().ConfigureAwait(false);
-                    ApiError _errorBody =  Microsoft.Rest.Serialization.SafeJsonConvert.DeserializeObject<ApiError>(_responseContent, Client.DeserializationSettings);
+                    ApiError _errorBody =  Rest.Serialization.SafeJsonConvert.DeserializeObject<ApiError>(_responseContent, Client.DeserializationSettings);
                     if (_errorBody != null)
                     {
                         ex.Body = _errorBody;
@@ -2256,7 +2256,7 @@ namespace Imagebuilder
                 _responseContent = await _httpResponse.Content.ReadAsStringAsync().ConfigureAwait(false);
                 try
                 {
-                    _result.Body = Microsoft.Rest.Serialization.SafeJsonConvert.DeserializeObject<Page<ImageTemplate>>(_responseContent, Client.DeserializationSettings);
+                    _result.Body = Rest.Serialization.SafeJsonConvert.DeserializeObject<Page<ImageTemplate>>(_responseContent, Client.DeserializationSettings);
                 }
                 catch (JsonException ex)
                 {
@@ -2388,7 +2388,7 @@ namespace Imagebuilder
                 try
                 {
                     _responseContent = await _httpResponse.Content.ReadAsStringAsync().ConfigureAwait(false);
-                    ApiError _errorBody =  Microsoft.Rest.Serialization.SafeJsonConvert.DeserializeObject<ApiError>(_responseContent, Client.DeserializationSettings);
+                    ApiError _errorBody =  Rest.Serialization.SafeJsonConvert.DeserializeObject<ApiError>(_responseContent, Client.DeserializationSettings);
                     if (_errorBody != null)
                     {
                         ex.Body = _errorBody;
@@ -2425,7 +2425,7 @@ namespace Imagebuilder
                 _responseContent = await _httpResponse.Content.ReadAsStringAsync().ConfigureAwait(false);
                 try
                 {
-                    _result.Body = Microsoft.Rest.Serialization.SafeJsonConvert.DeserializeObject<Page<ImageTemplate>>(_responseContent, Client.DeserializationSettings);
+                    _result.Body = Rest.Serialization.SafeJsonConvert.DeserializeObject<Page<ImageTemplate>>(_responseContent, Client.DeserializationSettings);
                 }
                 catch (JsonException ex)
                 {
@@ -2556,7 +2556,7 @@ namespace Imagebuilder
                 try
                 {
                     _responseContent = await _httpResponse.Content.ReadAsStringAsync().ConfigureAwait(false);
-                    ApiError _errorBody =  Microsoft.Rest.Serialization.SafeJsonConvert.DeserializeObject<ApiError>(_responseContent, Client.DeserializationSettings);
+                    ApiError _errorBody =  Rest.Serialization.SafeJsonConvert.DeserializeObject<ApiError>(_responseContent, Client.DeserializationSettings);
                     if (_errorBody != null)
                     {
                         ex.Body = _errorBody;
@@ -2593,7 +2593,7 @@ namespace Imagebuilder
                 _responseContent = await _httpResponse.Content.ReadAsStringAsync().ConfigureAwait(false);
                 try
                 {
-                    _result.Body = Microsoft.Rest.Serialization.SafeJsonConvert.DeserializeObject<Page<RunOutput>>(_responseContent, Client.DeserializationSettings);
+                    _result.Body = Rest.Serialization.SafeJsonConvert.DeserializeObject<Page<RunOutput>>(_responseContent, Client.DeserializationSettings);
                 }
                 catch (JsonException ex)
                 {

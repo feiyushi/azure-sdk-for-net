@@ -4,7 +4,7 @@
 // regenerated.
 // </auto-generated>
 
-namespace Imagebuilder
+namespace Microsoft.Azure.Management.ImageBuilder
 {
     using Microsoft.Rest;
     using Microsoft.Rest.Azure;

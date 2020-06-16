@@ -4,7 +4,7 @@
 // regenerated.
 // </auto-generated>
 
-namespace Imagebuilder.Models
+namespace Microsoft.Azure.Management.ImageBuilder.Models
 {
     using Microsoft.Rest;
     using Microsoft.Rest.Serialization;
@@ -17,7 +17,7 @@ namespace Imagebuilder.Models
     /// Image template is an ARM resource managed by
     /// Microsoft.VirtualMachineImages provider
     /// </summary>
-    [JsonTransformation]
+    [Rest.Serialization.JsonTransformation]
     public partial class ImageTemplate : Resource
     {
         /// <summary>

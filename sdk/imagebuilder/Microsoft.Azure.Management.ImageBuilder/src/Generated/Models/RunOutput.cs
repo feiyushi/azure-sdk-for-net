@@ -4,7 +4,7 @@
 // regenerated.
 // </auto-generated>
 
-namespace Imagebuilder.Models
+namespace Microsoft.Azure.Management.ImageBuilder.Models
 {
     using Microsoft.Rest;
     using Microsoft.Rest.Serialization;
@@ -14,7 +14,7 @@ namespace Imagebuilder.Models
     /// <summary>
     /// Represents an output that was created by running an image template.
     /// </summary>
-    [JsonTransformation]
+    [Rest.Serialization.JsonTransformation]
     public partial class RunOutput : SubResource
     {
         /// <summary>
