@@ -4,7 +4,7 @@
 // regenerated.
 // </auto-generated>
 
-namespace Imagebuilder.Models
+namespace Microsoft.Azure.Management.ImageBuilder.Models
 {
     using Newtonsoft.Json;
     using System.Collections;
@@ -49,7 +49,7 @@ namespace Imagebuilder.Models
         /// <summary>
         /// Validate the object.
         /// </summary>
-        /// <exception cref="Microsoft.Rest.ValidationException">
+        /// <exception cref="Rest.ValidationException">
         /// Thrown if validation fails
         /// </exception>
         public override void Validate()

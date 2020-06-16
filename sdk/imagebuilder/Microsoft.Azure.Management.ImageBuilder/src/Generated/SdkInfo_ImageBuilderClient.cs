@@ -5,7 +5,7 @@
 // regenerated.
 // </auto-generated>
 
-namespace undefined
+namespace Microsoft.Azure.Management.ImageBuilder
 {
   using System;
   using System.Collections.Generic;
@@ -27,7 +27,7 @@ namespace undefined
       // BEGIN: Code Generation Metadata Section
       public static readonly String AutoRestVersion = "v2";
       public static readonly String AutoRestBootStrapperVersion = "autorest@2.0.4413";
-      public static readonly String AutoRestCmdExecuted = "cmd.exe /c autorest.cmd https://github.com/Azure/azure-rest-api-specs/blob/master/specification/imagebuilder/resource-manager/readme.md --csharp --version=v2 --reflect-api-versions --csharp.output-folder=F:\\azure-sdk-for-net\\sdk\\imagebuilder\\Microsoft.Azure.Management.ImageBuilder\\src\\Generated";
+      public static readonly String AutoRestCmdExecuted = "cmd.exe /c autorest.cmd https://github.com/Azure/azure-rest-api-specs/blob/master/specification/imagebuilder/resource-manager/readme.md --csharp --version=v2 --reflect-api-versions --csharp.namespace=Microsoft.Azure.Management.ImageBuilder --csharp.output-folder=F:\\azure-sdk-for-net\\sdk\\imagebuilder\\Microsoft.Azure.Management.ImageBuilder\\src\\Generated";
       public static readonly String GithubForkName = "Azure";
       public static readonly String GithubBranchName = "master";
       public static readonly String GithubCommidId = "7dd04f70789e293d5931948fa313cf08530fe6c6";
