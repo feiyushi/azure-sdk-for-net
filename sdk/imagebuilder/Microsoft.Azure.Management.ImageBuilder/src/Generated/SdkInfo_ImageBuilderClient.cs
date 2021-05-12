@@ -30,7 +30,7 @@ namespace Microsoft.Azure.Management.ImageBuilder
       public static readonly String AutoRestCmdExecuted = "cmd.exe /c autorest.cmd https://github.com/Azure/azure-rest-api-specs/blob/master/specification/imagebuilder/resource-manager/readme.md --csharp --version=v2 --reflect-api-versions --csharp.namespace=Microsoft.Azure.Management.ImageBuilder --csharp.output-folder=F:\\azure-sdk-for-net\\sdk\\imagebuilder\\Microsoft.Azure.Management.ImageBuilder\\src\\Generated";
       public static readonly String GithubForkName = "Azure";
       public static readonly String GithubBranchName = "master";
-      public static readonly String GithubCommidId = "7dd04f70789e293d5931948fa313cf08530fe6c6";
+      public static readonly String GithubCommidId = "1c03f492f52ebd076626f2dd00af01b25bbfa727";
       public static readonly String CodeGenerationErrors = "";
       public static readonly String GithubRepoName = "azure-rest-api-specs";
       // END: Code Generation Metadata Section

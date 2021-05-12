@@ -36,7 +36,11 @@ namespace Microsoft.Azure.Management.ImageBuilder.Models
         /// <param name="sku">Image sku from the [Azure Gallery
         /// Images](https://docs.microsoft.com/en-us/rest/api/compute/virtualmachineimages).</param>
         /// <param name="version">Image version from the [Azure Gallery
-        /// Images](https://docs.microsoft.com/en-us/rest/api/compute/virtualmachineimages).</param>
+        /// Images](https://docs.microsoft.com/en-us/rest/api/compute/virtualmachineimages).
+        /// If 'latest' is specified here, the version is evaluated when the
+        /// image build takes place, not when the template is submitted.
+        /// Specifying 'latest' could cause ROUNDTRIP_INCONSISTENT_PROPERTY
+        /// issue which will be fixed.</param>
         /// <param name="planInfo">Optional configuration of purchase plan for
         /// platform image.</param>
         public ImageTemplatePlatformImageSource(string publisher = default(string), string offer = default(string), string sku = default(string), string version = default(string), PlatformImagePurchasePlan planInfo = default(PlatformImagePurchasePlan))
@@ -78,6 +82,10 @@ namespace Microsoft.Azure.Management.ImageBuilder.Models
         /// <summary>
         /// Gets or sets image version from the [Azure Gallery
         /// Images](https://docs.microsoft.com/en-us/rest/api/compute/virtualmachineimages).
+        /// If 'latest' is specified here, the version is evaluated when the
+        /// image build takes place, not when the template is submitted.
+        /// Specifying 'latest' could cause ROUNDTRIP_INCONSISTENT_PROPERTY
+        /// issue which will be fixed.
         /// </summary>
         [JsonProperty(PropertyName = "version")]
         public string Version { get; set; }

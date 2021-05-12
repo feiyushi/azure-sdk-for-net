@@ -43,15 +43,20 @@ namespace Microsoft.Azure.Management.ImageBuilder.Models
         /// execute</param>
         /// <param name="runElevated">If specified, the PowerShell script will
         /// be run with elevated privileges</param>
+        /// <param name="runAsSystem">If specified, the PowerShell script will
+        /// be run with elevated privileges using the Local System user. Can
+        /// only be true when the runElevated field above is set to
+        /// true.</param>
         /// <param name="validExitCodes">Valid exit codes for the PowerShell
         /// script. [Default: 0]</param>
-        public ImageTemplatePowerShellCustomizer(string name = default(string), string scriptUri = default(string), string sha256Checksum = default(string), IList<string> inline = default(IList<string>), bool? runElevated = default(bool?), IList<int?> validExitCodes = default(IList<int?>))
+        public ImageTemplatePowerShellCustomizer(string name = default(string), string scriptUri = default(string), string sha256Checksum = default(string), IList<string> inline = default(IList<string>), bool? runElevated = default(bool?), bool? runAsSystem = default(bool?), IList<int?> validExitCodes = default(IList<int?>))
             : base(name)
         {
             ScriptUri = scriptUri;
             Sha256Checksum = sha256Checksum;
             Inline = inline;
             RunElevated = runElevated;
+            RunAsSystem = runAsSystem;
             ValidExitCodes = validExitCodes;
             CustomInit();
         }
@@ -88,6 +93,14 @@ namespace Microsoft.Azure.Management.ImageBuilder.Models
         /// </summary>
         [JsonProperty(PropertyName = "runElevated")]
         public bool? RunElevated { get; set; }
+
+        /// <summary>
+        /// Gets or sets if specified, the PowerShell script will be run with
+        /// elevated privileges using the Local System user. Can only be true
+        /// when the runElevated field above is set to true.
+        /// </summary>
+        [JsonProperty(PropertyName = "runAsSystem")]
+        public bool? RunAsSystem { get; set; }
 
         /// <summary>
         /// Gets or sets valid exit codes for the PowerShell script. [Default:
